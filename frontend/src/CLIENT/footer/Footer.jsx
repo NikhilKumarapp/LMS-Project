@@ -12,7 +12,7 @@ const Footer = () => {
             <ul className='list-unstyled'>
               <li>Email: info@library.com</li>
               <li>Phone: +977-9801234568</li>
-              <li>Address: Kathmandu,Nepal</li>
+              <li>Address: Roorkee, India</li>
             </ul>
           </div>
           <div className='col-md-4'>
