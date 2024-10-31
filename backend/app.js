@@ -46,7 +46,9 @@ app.use(express.json());
 
 // making uploads folder globally accessable through static routing
 const path = require("path");
+const _dirname = path.resolve();
 // const { cookie } = require('express/lib/response')
+app.use(express.static(path.join(_dirname , "/frontend/dist") ))
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Middlewares
@@ -118,6 +120,10 @@ app.use("/api/v1/query", QueryRouter);
 
 app.use(CustomError);
 app.use(PageNotFound);
+
+app.get('*', (req,res) => {
+  res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"))
+})
 
 // Server
 const port = process.env.CONNECTION_PORT || 3000;

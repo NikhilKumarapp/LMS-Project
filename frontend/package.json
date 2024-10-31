@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
+    "backend": "file:..",
     "bootstrap": "^5.2.3",
     "history": "^5.3.0",
     "package-name": "^0.1.0",
